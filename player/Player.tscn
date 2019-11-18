@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://player/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/player/sideway/bear0000_full_size.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/player/sideway/bear0001_full_size.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/player/sideway/bear0002_full_size.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/player/up/up_view_full_size.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/player/down/down_view_full_size.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/player/sideway/bear0003_full_size.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/player/down/down_wallhit_view_full_size.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 31, 31 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "default",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "wallhit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "wallhitDown",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.42
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.04, 0.04 )
+frames = SubResource( 2 )
+
+[node name="PlayerView" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.6, 0.6 )
+process_mode = 0
+smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 0.14
+drag_margin_top = 0.14
+drag_margin_right = 0.13
+drag_margin_bottom = 0.14
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="HugeView" type="Camera2D" parent="."]
+zoom = Vector2( 5, 5 )
+smoothing_enabled = true
+smoothing_speed = 50.0
+drag_margin_left = 0.7
+drag_margin_top = 0.7
+drag_margin_right = 0.7
+drag_margin_bottom = 0.7
+editor_draw_limits = true
+editor_draw_drag_margin = true
+[connection signal="timeout" from="Timer" to="." method="_restoreAnimation"]
