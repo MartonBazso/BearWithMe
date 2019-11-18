@@ -1,9 +1,11 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://levels/_level_template/Node2D.gd" type="Script" id=1]
 [ext_resource path="res://other/tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/images/map/tileset prototype.png" type="Texture" id=4]
+[ext_resource path="res://assets/visuals/map/tileset prototype.png" type="Texture" id=4]
+[ext_resource path="res://assets/visuals/gui/mute_button/VolumeButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/visuals/gui/zoom_button/ZoomButton.tscn" type="PackedScene" id=6]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -311,6 +313,7 @@ __meta__ = {
 }
 
 [node name="Target" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1472, 2688 )
 __meta__ = {
 "_edit_lock_": true
@@ -328,20 +331,15 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 1, 0, 0, 1 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UserInterface" type="CanvasLayer" parent="."]
 layer = 5
 rotation = 0.0174533
 scale = Vector2( 1, 1 )
 transform = Transform2D( 0.999848, 0.0174524, -0.0174524, 0.999848, 0, 0 )
 
-[node name="CheckButton" type="CheckButton" parent="CanvasLayer"]
-margin_left = 65.1072
-margin_top = 62.8733
-margin_right = 229.107
-margin_bottom = 218.873
-focus_mode = 0
-enabled_focus_mode = 0
-flat = true
+[node name="VolumeButton" parent="UserInterface" instance=ExtResource( 5 )]
+
+[node name="ZoomButton" parent="UserInterface" instance=ExtResource( 6 )]
 [connection signal="ready" from="." to="." method="_on_Node2D_ready"]
 [connection signal="body_entered" from="Target" to="." method="_on_Target_body_entered"]
-[connection signal="toggled" from="CanvasLayer/CheckButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="toggled" from="UserInterface/ZoomButton" to="." method="_on_ZoomButton_toggled"]

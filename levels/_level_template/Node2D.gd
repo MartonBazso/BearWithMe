@@ -30,8 +30,6 @@ func _on_Target_body_entered(body):
 	#get_tree().change_scene("res://levels\\level" + str(globals.level) + "\\level" + str(globals.level) + ".tscn")
 
 
-
-func _on_CheckButton_toggled(button_pressed):
-	print(button_pressed)
-	$Player/PlayerView.current = button_pressed # Replace with function body.
-	$Player/HugeView.current = !button_pressed
+func _on_ZoomButton_toggled(button_pressed):
+	$Player/PlayerView.current = !button_pressed
+	$Player/HugeView.current = button_pressed
