@@ -1,8 +1,11 @@
 extends Control
 
+
+
 func _ready():
-	pass
+	$".".set_pressed(!globals.isVolumeOn)
 
 
 func _on_VolumeButton_toggled(button_pressed):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 0)
+	MusicPlayer.stream_paused = globals.isVolumeOn
+	globals.isVolumeOn = !button_pressed

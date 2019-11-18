@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Night at the Dance Hall From Twin Musicom.ogg-eda5f19d0480188da5a1675523d5144d.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/Night at the Dance Hall From Twin Musicom.ogg"
+dest_files=[ "res://.import/Night at the Dance Hall From Twin Musicom.ogg-eda5f19d0480188da5a1675523d5144d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

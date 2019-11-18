@@ -2,8 +2,8 @@
 
 [ext_resource path="res://levels/main_screen/MainScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/map/background/huge_background.jpg" type="Texture" id=2]
-[ext_resource path="res://levels/_titlescreen/TitleScreen.tscn" type="PackedScene" id=3]
-[ext_resource path="res://levels/_level_selector/LevelSelector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/title_screen/TitleScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/level_selector/LevelSelector.tscn" type="PackedScene" id=4]
 [ext_resource path="res://other/Particles2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/visuals/gui/mute_button/VolumeButton.tscn" type="PackedScene" id=6]
 
@@ -95,3 +95,4 @@ margin_top = 1150.0
 margin_right = 834.0
 margin_bottom = 1443.0
 rect_scale = Vector2( 0.4, 0.4 )
+[connection signal="toggled" from="VolumeButton" to="." method="_on_VolumeButton_toggled"]

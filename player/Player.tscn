@@ -69,7 +69,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="HugeView" type="Camera2D" parent="."]
-zoom = Vector2( 5, 5 )
+zoom = Vector2( 3, 3 )
 smoothing_enabled = true
 smoothing_speed = 50.0
 drag_margin_left = 0.7
