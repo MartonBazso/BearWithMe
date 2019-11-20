@@ -14,6 +14,7 @@ func _ready():
 
 
 func _on_LevelSelector_pressed():
+	globals.currentLevel = level
 	get_tree().change_scene('res://levels/level_template/Node2D.tscn')#'res://levels/level'+ str(level) +'/Level'+ str(level) +'.tscn')
 
 

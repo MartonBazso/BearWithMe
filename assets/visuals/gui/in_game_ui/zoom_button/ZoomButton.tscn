@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/visuals/gui/zoom_button/zoom_on.png" type="Texture" id=1]
-[ext_resource path="res://assets/visuals/gui/zoom_button/zoom_off.png" type="Texture" id=2]
+[ext_resource path="res://assets/visuals/gui/in_game_ui/zoom_button/zoom_on.png" type="Texture" id=1]
+[ext_resource path="res://assets/visuals/gui/in_game_ui/zoom_button/zoom_off.png" type="Texture" id=2]
+
 
 [node name="ZoomButton" type="TextureButton"]
 margin_left = 559.647

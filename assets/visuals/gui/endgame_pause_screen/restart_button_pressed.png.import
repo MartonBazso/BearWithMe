@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/zoom_off.png-9f06f40e4dd39b664c35bb6426ea8f88.stex"
+path="res://.import/restart_button_pressed.png-9bd4a7b622d21edf6df407cb261d837d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visuals/gui/zoom_button/zoom_off.png"
-dest_files=[ "res://.import/zoom_off.png-9f06f40e4dd39b664c35bb6426ea8f88.stex" ]
+source_file="res://assets/visuals/gui/endgame_pause_screen/restart_button_pressed.png"
+dest_files=[ "res://.import/restart_button_pressed.png-9bd4a7b622d21edf6df407cb261d837d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
