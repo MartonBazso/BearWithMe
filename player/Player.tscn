@@ -6,8 +6,8 @@
 [ext_resource path="res://assets/visuals/player/sideway/bear0002_full_size.png" type="Texture" id=4]
 [ext_resource path="res://assets/visuals/player/up/up_view_full_size.png" type="Texture" id=5]
 [ext_resource path="res://assets/visuals/player/sideway/bear0003_full_size.png" type="Texture" id=6]
-[ext_resource path="res://assets/visuals/player/down/down_wallhit_view_full_size.png" type="Texture" id=7]
-[ext_resource path="res://assets/visuals/player/down/down_view_full_size.png" type="Texture" id=8]
+[ext_resource path="res://assets/visuals/player/down/down_view_full_size.png" type="Texture" id=7]
+[ext_resource path="res://assets/visuals/player/down/down_wallhit_view_full_size.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31, 31 )
@@ -31,12 +31,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": false,
-"name": "wallhitDown",
+"name": "down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
-"name": "down",
+"name": "wallhitDown",
 "speed": 5.0
 } ]
 
@@ -69,8 +69,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="HugeView" type="Camera2D" parent="."]
-zoom = Vector2( 3, 3 )
-smoothing_enabled = true
+zoom = Vector2( 2.5, 2.5 )
 smoothing_speed = 50.0
 drag_margin_left = 0.7
 drag_margin_top = 0.7
