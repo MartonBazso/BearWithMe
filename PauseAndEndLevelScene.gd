@@ -10,9 +10,10 @@ signal onTitleScreenPressed
 func _ready():
 	if type == 0 : 
 		$VSeparation/Resume.visible = true
+		$VSeparation/NextGame.visible = false
 	elif type == 1:
 		$VSeparation/NextGame.visible = true
-		
+		$VSeparation/Resume.visible = false
 
 
 func _on_TitleScreenButton_pressed():

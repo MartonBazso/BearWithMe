@@ -5,12 +5,12 @@
 [ext_resource path="res://assets/visuals/player/sideway/bear0001_full_size.png" type="Texture" id=3]
 [ext_resource path="res://assets/visuals/player/sideway/bear0002_full_size.png" type="Texture" id=4]
 [ext_resource path="res://assets/visuals/player/up/up_view_full_size.png" type="Texture" id=5]
-[ext_resource path="res://assets/visuals/player/sideway/bear0003_full_size.png" type="Texture" id=6]
-[ext_resource path="res://assets/visuals/player/down/down_view_full_size.png" type="Texture" id=7]
-[ext_resource path="res://assets/visuals/player/down/down_wallhit_view_full_size.png" type="Texture" id=8]
+[ext_resource path="res://assets/visuals/player/down/down_view_full_size.png" type="Texture" id=6]
+[ext_resource path="res://assets/visuals/player/down/down_wallhit_view_full_size.png" type="Texture" id=7]
+[ext_resource path="res://assets/visuals/player/sideway/bear0003_full_size.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31, 31 )
+extents = Vector2( 42.9797, 38.4242 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -26,17 +26,17 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": false,
-"name": "wallhit",
+"name": "down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": false,
-"name": "down",
+"name": "wallhitDown",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
-"name": "wallhitDown",
+"name": "wallhit",
 "speed": 5.0
 } ]
 
@@ -53,7 +53,7 @@ one_shot = true
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.04, 0.04 )
+scale = Vector2( 0.06, 0.06 )
 frames = SubResource( 2 )
 
 [node name="PlayerView" type="Camera2D" parent="."]
