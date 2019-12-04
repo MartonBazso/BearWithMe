@@ -25,9 +25,12 @@ func _on_Node2D_ready():
 
 
 func _on_Target_body_entered(body):
-	globals.currentLevel = globals.currentLevel + 1
-	get_tree().reload_current_scene()
-	#get_tree().change_scene("res://levels\\level" + str(globals.level) + "\\level" + str(globals.level) + ".tscn")
+	#get_tree().reload_current_scene()
+	$UserInterface/PauseAndEndLevelScene.type = 1
+	$UserInterface/PauseAndEndLevelScene._ready()
+	$UserInterface/PauseAndEndLevelScene.visible = true
+	print(globals.save_game())
+	get_tree().paused = true
 
 
 func _on_UserInterface_onZoomToggled(button_pressed):
@@ -57,4 +60,9 @@ func _on_PauseAndEndLevelScene_onRestartPressed():
 
 
 func _on_PauseAndEndLevelScene_onNextGamePressed():
-	print("Next game would beeee... : " + str(globals.currentLevel + 1))
+	globals.currentLevel = globals.currentLevel + 1
+	print("Next game would beeee... : " + str(globals.currentLevel))
+
+
+func _on_Fish_onFishCollected():
+	$UserInterface._ready()

@@ -1,9 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player/user_interface/UserInterface.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/gui/in_game_ui/zoom_button/ZoomButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/visuals/gui/in_game_ui/mute_button/VolumeButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/visuals/gui/in_game_ui/pause_button/pause_button2.png" type="Texture" id=4]
+[ext_resource path="res://assets/visuals/utility/fish_collectible.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/YeonSung-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 56
+font_data = ExtResource( 6 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Label
+
+func _ready():
+	pass
+"
 
 [node name="UserInterface" type="CanvasLayer"]
 pause_mode = 2
@@ -16,10 +29,10 @@ margin_bottom = 95.0
 color = Color( 0, 0, 0, 0.109804 )
 
 [node name="ZoomButton" parent="." instance=ExtResource( 2 )]
-margin_left = 572.57
-margin_top = -9.62564
-margin_right = 1084.57
-margin_bottom = 502.374
+margin_left = 580.723
+margin_top = 0.70955
+margin_right = 1092.72
+margin_bottom = 512.71
 rect_scale = Vector2( 0.25, 0.25 )
 
 [node name="VolumeButton" parent="." instance=ExtResource( 3 )]
@@ -31,5 +44,26 @@ margin_right = 415.0
 margin_bottom = 351.0
 rect_scale = Vector2( 0.2, 0.2 )
 texture_normal = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 273.515
+margin_top = 7.85329
+margin_right = 483.515
+margin_bottom = 428.853
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 5 )
+stretch_mode = 3
+
+[node name="CurrentMoney" type="Label" parent="."]
+margin_left = 331.935
+margin_top = 24.156
+margin_right = 466.935
+margin_bottom = 81.156
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99999"
+align = 1
+valign = 1
+script = SubResource( 2 )
 [connection signal="toggled" from="ZoomButton" to="." method="_on_ZoomButton_toggled"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
