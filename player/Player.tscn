@@ -1,44 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/visuals/player/sideway/bear0000_full_size.png" type="Texture" id=2]
-[ext_resource path="res://assets/visuals/player/sideway/bear0001_full_size.png" type="Texture" id=3]
-[ext_resource path="res://assets/visuals/player/sideway/bear0002_full_size.png" type="Texture" id=4]
-[ext_resource path="res://assets/visuals/player/up/up_view_full_size.png" type="Texture" id=5]
-[ext_resource path="res://assets/visuals/player/down/down_view_full_size.png" type="Texture" id=6]
-[ext_resource path="res://assets/visuals/player/down/down_wallhit_view_full_size.png" type="Texture" id=7]
-[ext_resource path="res://assets/visuals/player/sideway/bear0003_full_size.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.9797, 38.4242 )
-
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": false,
-"name": "default",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": false,
-"name": "up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": false,
-"name": "down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": false,
-"name": "wallhitDown",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "wallhit",
-"speed": 5.0
-} ]
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 1
@@ -51,10 +16,6 @@ one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.06, 0.06 )
-frames = SubResource( 2 )
 
 [node name="PlayerView" type="Camera2D" parent="."]
 current = true

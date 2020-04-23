@@ -6,8 +6,8 @@ func _on_PlayButton_pressed():
 	#var value = get_tree().change_scene('res://levels/_level_selector/LevelSelector.tscn') 
 	var animationPlayer
 	for c in get_node('../').get_children():
-    if c is AnimationPlayer:
-        animationPlayer = c
+	if c is AnimationPlayer:
+		animationPlayer = c
 	animationPlayer.play('SlideTitle')
 
 

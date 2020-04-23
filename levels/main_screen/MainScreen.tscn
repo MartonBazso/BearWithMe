@@ -80,6 +80,9 @@ margin_right = 4336.0
 margin_bottom = 2526.95
 rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TitleScreen" parent="." instance=ExtResource( 3 )]
 

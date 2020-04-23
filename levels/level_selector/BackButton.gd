@@ -13,8 +13,8 @@ func _on_BackButton_pressed():
 	#var value = get_tree().change_scene_to(preloaded_scene)
 	var animationPlayer
 	for c in get_node('../../').get_children():
-    if c is AnimationPlayer:
-        animationPlayer = c
+	if c is AnimationPlayer:
+		animationPlayer = c
 	animationPlayer.play('SlideLvlSelector')
 	
 
