@@ -8,7 +8,7 @@ func _ready():
 	var k = 1
 	for j in range(6): # sor
 		for i in range(5): #oszlop
-			var scene = load("res://levels/level_selector/LevelSelectorButton.tscn")
+			var scene = load("res://old_levels/level_selector/LevelSelectorButton.tscn")
 			var instance = scene.instance()
 			instance.rect_position.x = margin + i * spacingH
 			instance.rect_position.y = margin + j * spacingV
@@ -16,7 +16,7 @@ func _ready():
 			add_child(instance)
 			k+=1
 			
-	var scene = load("res://levels/level_selector/BackButton.tscn")
+	var scene = load("res://old_levels/level_selector/BackButton.tscn")
 	var instance = scene.instance()
 	instance.rect_position.x = 50
 	instance.rect_position.y = 1150

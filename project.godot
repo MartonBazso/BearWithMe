@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Slide"
-run/main_scene="res://levels/main_screen/MainScreen.tscn"
+run/main_scene="res://old_levels/main_screen/MainScreen.tscn"
 boot_splash/bg_color=Color( 1, 1, 1, 1 )
 config/icon="res://icon.png"
 

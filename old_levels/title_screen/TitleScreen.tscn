@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://levels/title_screen/TitleScreen.gd" type="Script" id=1]
+[ext_resource path="res://old_levels/title_screen/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/map/background/huge_background.jpg" type="Texture" id=2]
 [ext_resource path="res://other/Particles2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/fonts/YeonSung-Regular.ttf" type="DynamicFontData" id=4]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/visuals/gui/title_screen/settings_button_pressed.png" type="Texture" id=8]
 [ext_resource path="res://assets/visuals/gui/title_screen/quit_button.png" type="Texture" id=9]
 [ext_resource path="res://assets/visuals/gui/title_screen/quit_button_pressed.png" type="Texture" id=10]
+
 
 
 
