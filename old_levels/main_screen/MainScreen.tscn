@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://levels/main_screen/MainScreen.gd" type="Script" id=1]
+[ext_resource path="res://old_levels/main_screen/MainScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/map/background/huge_background.jpg" type="Texture" id=2]
-[ext_resource path="res://levels/title_screen/TitleScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://old_levels/title_screen/TitleScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/fonts/YeonSung-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://levels/level_selector/LevelSelector.tscn" type="PackedScene" id=5]
+[ext_resource path="res://old_levels/level_selector/LevelSelector.tscn" type="PackedScene" id=5]
 [ext_resource path="res://other/Particles2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/visuals/gui/in_game_ui/mute_button/VolumeButton.tscn" type="PackedScene" id=7]
 
@@ -72,6 +72,9 @@ tracks/1/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -1664.0
@@ -80,6 +83,9 @@ margin_right = 4336.0
 margin_bottom = 2526.95
 rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TitleScreen" parent="." instance=ExtResource( 3 )]
 
@@ -100,8 +106,6 @@ by Twin Musicom
 valign = 2
 
 [node name="LevelSelector" parent="." instance=ExtResource( 5 )]
-margin_left = 720.0
-margin_right = 720.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/SlideLvlSelector = SubResource( 2 )
@@ -112,9 +116,9 @@ visible = true
 position = Vector2( 320, 0 )
 
 [node name="VolumeButton" parent="." instance=ExtResource( 7 )]
-margin_left = 530.0
-margin_top = 1150.0
-margin_right = 834.0
-margin_bottom = 1443.0
-rect_scale = Vector2( 0.4, 0.4 )
+margin_left = 394.002
+margin_top = 643.099
+margin_right = 698.002
+margin_bottom = 936.099
+rect_scale = Vector2( 0.16, 0.16 )
 [connection signal="toggled" from="VolumeButton" to="." method="_on_VolumeButton_toggled"]

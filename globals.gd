@@ -1,6 +1,6 @@
 extends Node
 
-var speed = 5
+var speed = 3
 var currentLevel = 1
 var maxLevelReached = 15
 var isVolumeOn = true
@@ -15,11 +15,11 @@ func save_game():
 
 func get_params():
 	var save_dict = {
-	    "speed" : speed,
-	    "currentLevel" : currentLevel,
-	    "maxLevelReached" : maxLevelReached,
-	    "isVolumeOn" : isVolumeOn,
-	    "money" : money
+		"speed" : speed,
+		"currentLevel" : currentLevel,
+		"maxLevelReached" : maxLevelReached,
+		"isVolumeOn" : isVolumeOn,
+		"money" : money
 	}
 	return save_dict
 
@@ -27,7 +27,7 @@ func get_params():
 func load_game():
 	var save_game = File.new()
 	if not save_game.file_exists("user://savegame.save"):
-	    return 
+		return 
 	
 	save_game.open("user://savegame.save", File.READ)
 	while !save_game.eof_reached():
