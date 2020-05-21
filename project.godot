@@ -8,34 +8,53 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "AsepriteImportData",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/AsepriteImportData.gd"
+}, {
+"base": "Node",
+"class": "AsepriteImporter",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/AsepriteImporter.gd"
+}, {
+"base": "Node",
+"class": "EditorTheme",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/EditorTheme.gd"
+} ]
 _global_script_class_icons={
-
+"AsepriteImportData": "",
+"AsepriteImporter": "",
+"EditorTheme": ""
 }
 
 [application]
 
 config/name="Slide"
-run/main_scene="res://old_levels/main_screen/MainScreen.tscn"
+run/main_scene="res://Levels/Level0.tscn"
 boot_splash/bg_color=Color( 1, 1, 1, 1 )
 config/icon="res://icon.png"
 
 [autoload]
 
 globals="*res://globals.gd"
-MusicPlayer="*res://assets/sound/AudioStreamPlayer.tscn"
+MusicPlayer="*res://AudioStreamPlayer.tscn"
+UserData="*res://addons/github-integration/scripts/user_data.gd"
+IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 
 [display]
 
-window/size/width=480
+window/size/width=1280
 window/size/height=720
-window/size/test_width=1080
-window/size/test_height=720
 window/vsync/use_vsync=false
-window/handheld/orientation="portrait"
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="keep"
-window/stretch/shrink=1.1
+
+[editor_plugins]
+
+enabled=PoolStringArray( "Trail", "aseprite_importer", "github-integration" )
 
 [input]
 

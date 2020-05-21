@@ -25,19 +25,26 @@ func _physics_process(delta):
 	velocity = velocity.normalized() * speed
 	var collide = move_and_collide(velocity)
 	if(collide != null && dir != ""):
+		if globals.screen_shake: $Camera2D/ScreenShake.start()
+		$Timer.start()
 		if dir == "d":
-			$Sprite.frame = 3
-		elif dir == "u":
 			$Sprite.frame = 5
+		elif dir == "u":
+			$Sprite.frame = 8
 		else:
-			$Sprite.frame = 0
+			$Sprite.frame = 2
+		
 		dir = ""
-
+		
 			
 func _restoreAnimation():
-	if dir=="":
-		$Sprite.frame = 0;
-	
+	if $Sprite.frame == 5:
+		$Sprite.frame = 3
+	elif $Sprite.frame == 8:
+		$Sprite.frame = 6
+	else:
+		$Sprite.frame = 0
+
 func _input(event):
 	var swipeDir = Vector2()
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
@@ -48,11 +55,11 @@ func _input(event):
 			
 	if((event.is_action("PLAYER_UP") || (swipeDir.x == 0 && swipeDir.y == -1) ) && dir != 'r' && dir != 'l' && dir != 'd'):
 		dir = "u"
-		$Sprite.frame = 4
+		$Sprite.frame = 7
 	if((event.is_action("PLAYER_DOWN") || (swipeDir.x == 0 && swipeDir.y == 1) ) && dir != 'r' && dir != 'l' && dir != 'u'):
 		
 		dir = "d"
-		$Sprite.frame = 2
+		$Sprite.frame = 4
 	if((event.is_action("PLAYER_LEFT") || (swipeDir.x == -1 && swipeDir.y == 0) ) && dir != 'u' && dir != 'd' && dir != 'r'):
 		dir = "l"
 		if $Sprite.transform.x.x > 0:
@@ -79,3 +86,8 @@ func directionHelper(vector):
 		if(vector.x < 0):
 			finalVector = Vector2(-1,0)
 	return finalVector
+
+
+func _on_Timer_timeout():
+	if dir == "":
+		_restoreAnimation()

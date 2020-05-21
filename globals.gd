@@ -5,6 +5,7 @@ var currentLevel = 1
 var maxLevelReached = 15
 var isVolumeOn = true
 var money = 0
+var screen_shake = true
 
 func save_game():
 	var save_game = File.new()
