@@ -6,7 +6,7 @@ const EASE = Tween.EASE_IN_OUT
 var amplitude = 0
 onready var camera = get_parent()
 
-func start(duration = 0.2, frequency = 16, amplitude = 3):
+func start(duration = 0.2, frequency = 8, amplitude = 3):
 	self.amplitude = amplitude
 	$Duration.wait_time = duration
 	$Timer.wait_time = 1/float(frequency)
