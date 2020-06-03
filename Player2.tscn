@@ -7,7 +7,7 @@
 [ext_resource path="res://addons/Trail/trail_2d.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.84, 15.84 )
+extents = Vector2( 15.6, 15.6 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
