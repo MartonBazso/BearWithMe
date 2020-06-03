@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/LevelSelector.gd" type="Script" id=1]
+[ext_resource path="res://assets/buttons.png" type="Texture" id=2]
 
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 240, 48, 40 )
 
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 80, 240, 48, 40 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 191, 48, 41 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 80, 192, 48, 40 )
 
 [node name="LevelSelector" type="Control"]
 anchor_right = 1.0
@@ -11,3 +26,40 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+custom_constants/vseparation = 70
+custom_constants/hseparation = 70
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicButton" type="TextureButton" parent="."]
+margin_left = 528.527
+margin_top = 194.544
+margin_right = 576.527
+margin_bottom = 234.544
+toggle_mode = true
+action_mode = 0
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 529.177
+margin_top = 118.985
+margin_right = 577.177
+margin_bottom = 158.985
+texture_normal = SubResource( 3 )
+texture_pressed = SubResource( 4 )
+[connection signal="toggled" from="MusicButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

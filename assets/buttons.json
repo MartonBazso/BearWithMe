@@ -1,0 +1,137 @@
+{ "frames": [
+   {
+    "filename": "buttons #Play 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Play 1.aseprite",
+    "frame": { "x": 0, "y": 48, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Quit 0.aseprite",
+    "frame": { "x": 0, "y": 96, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Quit 1.aseprite",
+    "frame": { "x": 0, "y": 144, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Settings 0.aseprite",
+    "frame": { "x": 0, "y": 192, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Settings 1.aseprite",
+    "frame": { "x": 0, "y": 240, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #LevelSelector 0.aseprite",
+    "frame": { "x": 0, "y": 288, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #LevelSelector 1.aseprite",
+    "frame": { "x": 0, "y": 336, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Back 0.aseprite",
+    "frame": { "x": 0, "y": 384, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Back 1.aseprite",
+    "frame": { "x": 0, "y": 432, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Mute 0.aseprite",
+    "frame": { "x": 0, "y": 480, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "buttons #Mute 1.aseprite",
+    "frame": { "x": 0, "y": 528, "w": 80, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 48 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "buttons.png",
+  "format": "RGBA8888",
+  "size": { "w": 80, "h": 576 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Play", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "Quit", "from": 2, "to": 3, "direction": "forward" },
+   { "name": "Settings", "from": 4, "to": 5, "direction": "forward" },
+   { "name": "LevelSelector", "from": 6, "to": 7, "direction": "forward" },
+   { "name": "Back", "from": 8, "to": 9, "direction": "forward" },
+   { "name": "Mute", "from": 10, "to": 11, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
