@@ -62,13 +62,13 @@ func _input(event):
 		$Sprite.frame = 4
 	if((event.is_action("PLAYER_LEFT") || (swipeDir.x == -1 && swipeDir.y == 0) ) && dir != 'u' && dir != 'd' && dir != 'r'):
 		dir = "l"
-		if $Sprite.transform.x.x > 0:
-			$Sprite.transform.x.x *= -1
+		if !$Sprite.flip_h:
+			$Sprite.flip_h = !$Sprite.flip_h
 		$Sprite.frame = 1
 	if((event.is_action("PLAYER_RIGHT") || (swipeDir.x == 1 && swipeDir.y == 0) ) && dir != 'u' && dir != 'd' && dir != 'l'):
 		dir = "r"
-		if $Sprite.transform.x.x < 0:
-			$Sprite.transform.x.x *= -1
+		if $Sprite.flip_h:
+			$Sprite.flip_h = !$Sprite.flip_h
 		$Sprite.frame = 1
 	
 	
