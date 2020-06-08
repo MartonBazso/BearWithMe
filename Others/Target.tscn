@@ -12,7 +12,6 @@
 [ext_resource path="res://assets/visuals/mother_bear/mother_bear0008.png" type="Texture" id=10]
 [ext_resource path="res://assets/visuals/mother_bear/female_bear_happy.png" type="Texture" id=11]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 55.7303, 50.7566 )
 
@@ -51,6 +50,6 @@ color = Color( 1, 0, 0, 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.08, 0.08 )
 frames = SubResource( 2 )
-frame = 7
+frame = 2
 playing = true
 [connection signal="body_entered" from="." to="." method="_on_Target_body_entered"]

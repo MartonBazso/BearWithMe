@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/Jegesmedve Márton.ogg" type="AudioStream" id=1]
-[ext_resource path="res://Scripts/MainAudioStreamPlayer.gd" type="Script" id=2]
+[ext_resource path="res://assets/music_pnine.ogg" type="AudioStream" id=1]
+[ext_resource path="res://scripts/MainAudioStreamPlayer.gd" type="Script" id=2]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )

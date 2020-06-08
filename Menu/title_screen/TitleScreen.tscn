@@ -1,12 +1,15 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scripts/TitleScreen.gd" type="Script" id=1]
+[ext_resource path="res://scripts/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/map/background/huge_background.jpg" type="Texture" id=2]
 [ext_resource path="res://Others/Particles2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/fonts/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/buttons.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
+size = 22
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="AtlasTexture" id=2]
@@ -23,7 +26,7 @@ region = Rect2( 0, 96, 80, 40 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 5 )
-region = Rect2( 80, 48, 79, 40 )
+region = Rect2( 80, 98, 79, 38 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 5 )
@@ -67,7 +70,7 @@ custom_constants/separation = 100
 
 [node name="Title" type="Label" parent="VBoxContainer2"]
 margin_right = 640.0
-margin_bottom = 75.0
+margin_bottom = 105.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 10
@@ -78,51 +81,54 @@ align = 1
 valign = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
-margin_top = 175.0
+margin_top = 205.0
 margin_right = 640.0
-margin_bottom = 198.0
+margin_bottom = 345.0
 size_flags_horizontal = 3
 custom_constants/separation = 10
 alignment = 1
 
 [node name="Play" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
 margin_right = 640.0
-margin_bottom = 1.0
+margin_bottom = 40.0
 alignment = 1
 
 [node name="PlayButton" type="TextureButton" parent="VBoxContainer2/VBoxContainer/Play"]
-margin_left = 319.0
-margin_right = 320.0
-margin_bottom = 1.0
+margin_left = 280.0
+margin_right = 360.0
+margin_bottom = 40.0
+hint_tooltip = "Play the game with this button"
 focus_mode = 0
 texture_normal = SubResource( 2 )
 texture_pressed = SubResource( 3 )
 stretch_mode = 2
 
 [node name="Settings" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
-margin_top = 11.0
+margin_top = 50.0
 margin_right = 640.0
-margin_bottom = 12.0
+margin_bottom = 90.0
 alignment = 1
 
 [node name="SettingsButton" type="TextureButton" parent="VBoxContainer2/VBoxContainer/Settings"]
-margin_left = 319.0
-margin_right = 320.0
-margin_bottom = 1.0
+margin_left = 280.0
+margin_right = 360.0
+margin_bottom = 40.0
+hint_tooltip = "Open the settings with this button"
 texture_normal = SubResource( 4 )
 texture_pressed = SubResource( 5 )
 stretch_mode = 2
 
 [node name="Quit" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
-margin_top = 22.0
+margin_top = 100.0
 margin_right = 640.0
-margin_bottom = 23.0
+margin_bottom = 140.0
 alignment = 1
 
 [node name="QuitButton" type="TextureButton" parent="VBoxContainer2/VBoxContainer/Quit"]
-margin_left = 319.0
-margin_right = 320.0
-margin_bottom = 1.0
+margin_left = 280.0
+margin_right = 360.0
+margin_bottom = 40.0
+hint_tooltip = "Exit the game with this button"
 texture_normal = SubResource( 6 )
 texture_pressed = SubResource( 7 )
 stretch_mode = 2

@@ -15,7 +15,7 @@ func _ready():
 
 func _on_LevelSelector_pressed():
 	globals.currentLevel = level
-	get_tree().change_scene('res://levels/level0.tscn')#'res://levels/level'+ str(level) +'/level'+ str(level) +'.tscn')
+	get_tree().change_scene('res://levels/level' + str(level) + '.tscn')
 
 
 func _on_LevelSelector_button_up():

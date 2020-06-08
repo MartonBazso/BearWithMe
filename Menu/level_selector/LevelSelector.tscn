@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/LevelSelector.gd" type="Script" id=1]
+[ext_resource path="res://scripts/LevelSelector.gd" type="Script" id=1]
 [ext_resource path="res://assets/buttons.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=1]

@@ -151,7 +151,6 @@ position = Vector2( 310, 230 )
 texture = ExtResource( 4 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 1, 0 )
 tile_set = SubResource( 13 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -161,7 +160,7 @@ tile_data = PoolIntArray( 589822, 0, 0, 589823, 0, 1, 524288, 0, 1, 524289, 0, 2
 position = Vector2( 256, 512 )
 
 [node name="Node2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0, 256 )
+position = Vector2( -32, 232 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 32, 320 )
