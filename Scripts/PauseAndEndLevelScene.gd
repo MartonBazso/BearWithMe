@@ -1,5 +1,4 @@
 extends Control
-export(int) var type = 0
 
 signal onResumePressed
 signal onNextGamePressed
@@ -8,12 +7,7 @@ signal onTitleScreenPressed
 
 
 func _ready():
-	if type == 0 : 
-		$VSeparation/Resume.visible = true
-		$VSeparation/NextGame.visible = false
-	elif type == 1:
-		$VSeparation/NextGame.visible = true
-		$VSeparation/Resume.visible = false
+	pass
 
 
 func _on_TitleScreenButton_pressed():
@@ -30,3 +24,7 @@ func _on_ResumeButton_pressed():
 
 func _on_NextGameButton_pressed():
 	emit_signal("onNextGamePressed")
+	
+
+func _on_MusicButton_toggled(button_pressed):
+	globals.isVolumeOn = button_pressed
