@@ -7,7 +7,7 @@ var pressed = false
 
 func _ready():
 	$Sprite.frame = 0
-	
+	$"../UI".connect("change_camera_zoom_to", self, "_on_UI_change_camera_zoom_to")
 	
 	
 
@@ -35,8 +35,8 @@ func _physics_process(delta):
 			$Sprite.frame = 2
 		
 		dir = ""
+	
 		
-			
 func _restoreAnimation():
 	if $Sprite.frame == 5:
 		$Sprite.frame = 3
@@ -46,31 +46,32 @@ func _restoreAnimation():
 		$Sprite.frame = 0
 
 func _input(event):
-	var swipeDir = Vector2()
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
-		pressed = event.pressed
-	if event is InputEventMouseMotion:
-		if pressed:
-			swipeDir = directionHelper(event.get_speed())
+	if !globals.mouseInGUI:
+		var swipeDir = Vector2()
+		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
+			pressed = event.pressed
+		if event is InputEventMouseMotion:
+			if pressed:
+				swipeDir = directionHelper(event.get_speed())
+				
+		if((event.is_action("PLAYER_UP") || (swipeDir.x == 0 && swipeDir.y == -1) ) && dir != 'r' && dir != 'l' && dir != 'd'):
+			dir = "u"
+			$Sprite.frame = 7
+		if((event.is_action("PLAYER_DOWN") || (swipeDir.x == 0 && swipeDir.y == 1) ) && dir != 'r' && dir != 'l' && dir != 'u'):
 			
-	if((event.is_action("PLAYER_UP") || (swipeDir.x == 0 && swipeDir.y == -1) ) && dir != 'r' && dir != 'l' && dir != 'd'):
-		dir = "u"
-		$Sprite.frame = 7
-	if((event.is_action("PLAYER_DOWN") || (swipeDir.x == 0 && swipeDir.y == 1) ) && dir != 'r' && dir != 'l' && dir != 'u'):
+			dir = "d"
+			$Sprite.frame = 4
+		if((event.is_action("PLAYER_LEFT") || (swipeDir.x == -1 && swipeDir.y == 0) ) && dir != 'u' && dir != 'd' && dir != 'r'):
+			dir = "l"
+			if !$Sprite.flip_h:
+				$Sprite.flip_h = !$Sprite.flip_h
+			$Sprite.frame = 1
+		if((event.is_action("PLAYER_RIGHT") || (swipeDir.x == 1 && swipeDir.y == 0) ) && dir != 'u' && dir != 'd' && dir != 'l'):
+			dir = "r"
+			if $Sprite.flip_h:
+				$Sprite.flip_h = !$Sprite.flip_h
+			$Sprite.frame = 1
 		
-		dir = "d"
-		$Sprite.frame = 4
-	if((event.is_action("PLAYER_LEFT") || (swipeDir.x == -1 && swipeDir.y == 0) ) && dir != 'u' && dir != 'd' && dir != 'r'):
-		dir = "l"
-		if !$Sprite.flip_h:
-			$Sprite.flip_h = !$Sprite.flip_h
-		$Sprite.frame = 1
-	if((event.is_action("PLAYER_RIGHT") || (swipeDir.x == 1 && swipeDir.y == 0) ) && dir != 'u' && dir != 'd' && dir != 'l'):
-		dir = "r"
-		if $Sprite.flip_h:
-			$Sprite.flip_h = !$Sprite.flip_h
-		$Sprite.frame = 1
-	
 	
 func directionHelper(vector):
 	var finalVector = Vector2()
@@ -91,3 +92,8 @@ func directionHelper(vector):
 func _on_Timer_timeout():
 	if dir == "":
 		_restoreAnimation()
+
+
+
+func _on_UI_change_camera_zoom_to(value):
+	$Camera2D.zoom = Vector2(value, value) # Replace with function body.

@@ -12,13 +12,13 @@ func _ready():
 			
 
 
-
-func _on_CheckButton_toggled(button_pressed):
-	globals.isVolumeOn = button_pressed
-
 func _on_BackButton_pressed():
 	var animationPlayer
 	for c in get_node('../').get_children():
 		if c is AnimationPlayer:
 			animationPlayer = c
 	animationPlayer.play('SlideLvlSelector')
+
+
+func _on_MusicButton_toggled(button_pressed):
+	globals.isVolumeOn = button_pressed

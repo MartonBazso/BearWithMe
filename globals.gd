@@ -1,12 +1,13 @@
 extends Node
 
-export(int) var speed = 3
-export(int) var currentLevel = 1
-export(int) var maxLevelReached = 15
-export(bool) var isVolumeOn = false
-export(int) var money = 0
-export(bool) var screen_shake = true
-export(int) var maxLevelOnFirstPage = 30
+var speed = 3
+var currentLevel = 1
+var maxLevelReached = 15
+var isVolumeOn = false
+var money = 0
+var screen_shake = true
+var maxLevelOnFirstPage = 30
+var mouseInGUI = false
 
 func save_game():
 	var save_game = File.new()
@@ -21,7 +22,9 @@ func get_params():
 		"currentLevel" : currentLevel,
 		"maxLevelReached" : maxLevelReached,
 		"isVolumeOn" : isVolumeOn,
-		"money" : money
+		"money" : money,
+		"screen_shake" : screen_shake,
+		"maxLevelOnFirstPage" : maxLevelOnFirstPage
 	}
 	return save_dict
 
@@ -37,3 +40,10 @@ func load_game():
 		for i in saved_file.keys():
 			set(i, saved_file[i])
 	save_game.close()
+
+
+func delete_save():
+	var save_game = File.new()
+	if save_game.file_exists("user://savegame.save"):
+		var dir = Directory.new()
+		dir.remove("user://savegame.save")

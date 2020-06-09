@@ -2,5 +2,5 @@ extends Control
 
 
 func _ready():
-	globals.load_game()
+	pass#globals.load_game()
 
