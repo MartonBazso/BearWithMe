@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave3.png-aa02ed4fe6f71a008e15838ed6578d86.stex"
+path="res://.import/mainscreen_background.png-ec099964e2560d3ef769dd6aba4efee3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameobjects/cave3.png"
-dest_files=[ "res://.import/cave3.png-aa02ed4fe6f71a008e15838ed6578d86.stex" ]
+source_file="res://assets/mainscreen_background.png"
+dest_files=[ "res://.import/mainscreen_background.png-ec099964e2560d3ef769dd6aba4efee3.stex" ]
 
 [params]
 

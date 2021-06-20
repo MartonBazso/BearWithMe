@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave3.png-aa02ed4fe6f71a008e15838ed6578d86.stex"
+path="res://.import/enemy_bear.png-79656288602c295501b48b2715c2df7c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameobjects/cave3.png"
-dest_files=[ "res://.import/cave3.png-aa02ed4fe6f71a008e15838ed6578d86.stex" ]
+source_file="res://assets/enemy_bear.png"
+dest_files=[ "res://.import/enemy_bear.png-79656288602c295501b48b2715c2df7c.stex" ]
 
 [params]
 

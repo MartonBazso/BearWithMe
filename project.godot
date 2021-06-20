@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="FreezingAdventure"
 run/main_scene="res://menu/main_screen/MainScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://gameobjects/pingu.png"
 
 [autoload]
 

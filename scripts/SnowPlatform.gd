@@ -3,23 +3,18 @@ extends Node2D
 func _ready():
 	pass
 
-signal body_entered
-func _on_Area2D_body_entered(body):
-	emit_signal("body_entered") # Replace with function body.
-
-
-func _on_Area2D_body_exited(body):
-	pass#emit_signal("body_entered") # Replace with function body.
-
-
 func _on_Area2D2_body_entered(body):
-	$Timer.start() # Replace with function body.
+	globals.screen_shake = false
+	$Timer.start()# Replace with function body.
 
 
 func _on_Timer_timeout():
-	for item in $StaticBody.get_children():
-		item.disabled = !item.disabled
+	for child in get_children():
+		if child is StaticBody2D:
+			for item in child.get_children():
+				item.disabled = !item.disabled
 
 
-func _on_Area2D2_body_exited(body):
+func _on_Area2D2_body_exited(body):	
+	globals.screen_shake = true
 	$Timer.start() # Replace with function body.

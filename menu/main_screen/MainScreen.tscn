@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 640, 0 ) ]
+"values": [ Vector2( 0, 360 ), Vector2( 640, 360 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("TitleScreen:rect_position")
@@ -30,13 +30,13 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -640, 0 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( -640, 360 ), Vector2( 0, 360 ) ]
 }
 
 [sub_resource type="Animation" id=2]
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("TitleScreen:rect_position")
+tracks/0/path = NodePath("LevelSelector:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -45,10 +45,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -640, 0 ) ]
+"values": [ Vector2( 640, 360 ), Vector2( 0, 360 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("LevelSelector:rect_position")
+tracks/1/path = NodePath("TitleScreen:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -57,7 +57,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 640, 0 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, 360 ), Vector2( -640, 360 ) ]
 }
 
 [node name="MainScreen" type="Control"]
@@ -69,10 +69,11 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 318.685, 182.498 )
+position = Vector2( 320, 180 )
 current = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 margin_left = -129.629
 margin_top = -413.115
 margin_right = 5870.37
@@ -83,11 +84,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TitleScreen" parent="." instance=ExtResource( 3 )]
-
 [node name="LevelSelector" parent="." instance=ExtResource( 5 )]
 margin_left = 640.0
-margin_right = 640.0
+margin_top = 360.0
+margin_right = 360.0
+margin_bottom = 640.0
+rect_rotation = -90.0
+
+[node name="TitleScreen" parent="." instance=ExtResource( 3 )]
+margin_top = 360.0
+margin_bottom = 640.0
+rect_rotation = -90.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/SlideLvlSelector = SubResource( 1 )

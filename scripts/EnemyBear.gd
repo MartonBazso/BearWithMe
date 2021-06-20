@@ -1,14 +1,17 @@
 extends KinematicBody2D
 
-var speed = globals.speed
+func _ready():
+	pass
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().reload_current_scene() # Replace with function body.
+
+
+var speed = globals.speed/2
 var dir = ""
 var velocity = Vector2()
 var pressed = false
-
-func _ready():
-	$Sprite.frame = 0
-	$"../UI".connect("change_camera_zoom_to", self, "_on_UI_change_camera_zoom_to")
-	
 	
 
 func _physics_process(delta):
@@ -25,7 +28,6 @@ func _physics_process(delta):
 	velocity = velocity.normalized() * speed
 	var collide = move_and_collide(velocity)
 	if(collide != null && dir != ""):
-		if globals.screen_shake: $Camera2D/ScreenShake.start()
 		$Timer.start()
 		if dir == "d":
 			$Sprite.frame = 5
