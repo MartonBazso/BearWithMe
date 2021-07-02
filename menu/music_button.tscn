@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://buttons.png" type="Texture" id=1]
+[ext_resource path="res://music_button.gd" type="Script" id=2]
+
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 240, 48, 40 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 80, 240, 48, 40 )
+
+[node name="MusicButton" type="TextureButton"]
+margin_left = 528.527
+margin_top = 194.544
+margin_right = 576.527
+margin_bottom = 234.544
+toggle_mode = true
+action_mode = 0
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

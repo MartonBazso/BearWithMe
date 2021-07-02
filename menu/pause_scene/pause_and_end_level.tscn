@@ -1,0 +1,201 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://pause_and_end_level_scene.gd" type="Script" id=1]
+[ext_resource path="res://buttons.png" type="Texture" id=2]
+[ext_resource path="res://menu/music_button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=4]
+
+
+[sub_resource type="DynamicFont" id=9]
+size = 8
+font_data = ExtResource( 4 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 80, 1, 80, 39 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 336, 80, 41 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 80, 336, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 384, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 80, 384, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 432, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 80, 432, 80, 40 )
+
+[node name="PauseAndEndLevelScene" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.470588 )
+
+[node name="VSeparation" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -180.0
+margin_right = 320.0
+margin_bottom = 180.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="HBoxContainer" parent="VSeparation"]
+margin_top = 57.0
+margin_right = 640.0
+margin_bottom = 119.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSeparation/Resume"]
+margin_left = 280.0
+margin_right = 360.0
+margin_bottom = 62.0
+
+[node name="resume" type="Label" parent="VSeparation/Resume/VBoxContainer"]
+margin_right = 80.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 9 )
+text = "Resume"
+align = 1
+valign = 1
+
+[node name="ResumeButton" type="TextureButton" parent="VSeparation/Resume/VBoxContainer"]
+margin_top = 22.0
+margin_right = 80.0
+margin_bottom = 62.0
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+
+[node name="NextGame" type="HBoxContainer" parent="VSeparation"]
+visible = false
+margin_top = 124.0
+margin_right = 640.0
+margin_bottom = 187.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSeparation/NextGame"]
+margin_left = 280.0
+margin_right = 360.0
+margin_bottom = 63.0
+
+[node name="next" type="Label" parent="VSeparation/NextGame/VBoxContainer"]
+margin_right = 80.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 9 )
+text = "Next Level"
+align = 1
+valign = 1
+
+[node name="NextGameButton" type="TextureButton" parent="VSeparation/NextGame/VBoxContainer"]
+margin_top = 22.0
+margin_right = 80.0
+margin_bottom = 63.0
+texture_normal = SubResource( 3 )
+texture_pressed = SubResource( 4 )
+
+[node name="Restart" type="HBoxContainer" parent="VSeparation"]
+margin_top = 149.0
+margin_right = 640.0
+margin_bottom = 211.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSeparation/Restart"]
+margin_left = 280.0
+margin_right = 360.0
+margin_bottom = 62.0
+
+[node name="restart" type="Label" parent="VSeparation/Restart/VBoxContainer"]
+margin_right = 80.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 9 )
+text = "Restart"
+align = 1
+valign = 1
+
+[node name="RestartButton" type="TextureButton" parent="VSeparation/Restart/VBoxContainer"]
+margin_top = 22.0
+margin_right = 80.0
+margin_bottom = 62.0
+texture_normal = SubResource( 5 )
+texture_pressed = SubResource( 6 )
+
+[node name="TitleScreen" type="HBoxContainer" parent="VSeparation"]
+margin_top = 241.0
+margin_right = 640.0
+margin_bottom = 303.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSeparation/TitleScreen"]
+margin_left = 280.0
+margin_right = 360.0
+margin_bottom = 62.0
+
+[node name="title" type="Label" parent="VSeparation/TitleScreen/VBoxContainer"]
+margin_right = 80.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 9 )
+text = "Menu"
+align = 1
+valign = 1
+
+[node name="TitleScreenButton" type="TextureButton" parent="VSeparation/TitleScreen/VBoxContainer"]
+margin_top = 22.0
+margin_right = 80.0
+margin_bottom = 62.0
+texture_normal = SubResource( 7 )
+texture_pressed = SubResource( 8 )
+
+[node name="music" type="Label" parent="."]
+margin_left = 541.221
+margin_top = 95.1366
+margin_right = 621.221
+margin_bottom = 113.137
+custom_fonts/font = SubResource( 9 )
+text = "Music"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicButton" parent="." instance=ExtResource( 3 )]
+margin_left = 555.752
+margin_top = 47.4983
+margin_right = 603.752
+margin_bottom = 87.4983
+[connection signal="pressed" from="VSeparation/Resume/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="VSeparation/NextGame/VBoxContainer/NextGameButton" to="." method="_on_NextGameButton_pressed"]
+[connection signal="pressed" from="VSeparation/Restart/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="VSeparation/TitleScreen/VBoxContainer/TitleScreenButton" to="." method="_on_TitleScreenButton_pressed"]
+[connection signal="toggled" from="MusicButton" to="." method="_on_MusicButton_toggled"]

@@ -1,0 +1,1 @@
+scp -P 2222 C:\Users\Marci\Documents\Godot\SliderGame\Export\Slider.apk marci@192.168.0.249:
