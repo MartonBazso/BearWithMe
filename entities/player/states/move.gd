@@ -21,4 +21,4 @@ func _update(delta):
 
 
 func _on_animation_finished(anim_name):
-	owner.get_node("AnimationPlayer").play("move")
+	pass

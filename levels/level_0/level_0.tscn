@@ -34,8 +34,3 @@ shape = SubResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -0.335869, -0.0665016 )
 scale = Vector2( 0.3, 0.3 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( 1.11956, 0.221672 )
-scale = Vector2( 3.33333, 3.33333 )
-current = true
