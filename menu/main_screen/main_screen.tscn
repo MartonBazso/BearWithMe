@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://main_screen.gd" type="Script" id=1]
+[ext_resource path="res://menu/title_screen/title_screen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://menu/level_selector/level_selector.tscn" type="PackedScene" id=5]
+[ext_resource path="res://particles_2d.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelSelector:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 360 ), Vector2( 640, 360 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TitleScreen:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -640, 360 ), Vector2( 0, 360 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelSelector:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 640, 360 ), Vector2( 0, 360 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TitleScreen:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 360 ), Vector2( -640, 360 ) ]
+}
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 320, 180 )
+current = true
+
+[node name="LevelSelector" parent="." instance=ExtResource( 5 )]
+margin_left = 640.0
+margin_top = 360.0
+margin_right = 360.0
+margin_bottom = 640.0
+rect_rotation = -90.0
+
+[node name="TitleScreen" parent="." instance=ExtResource( 3 )]
+margin_top = 360.0
+margin_bottom = 640.0
+rect_rotation = -90.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/SlideLvlSelector = SubResource( 1 )
+anims/SlideTitle = SubResource( 2 )
+
+[node name="Particles2D" parent="." instance=ExtResource( 6 )]
+visible = true
+position = Vector2( 320, 0 )

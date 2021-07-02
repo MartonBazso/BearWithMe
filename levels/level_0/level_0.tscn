@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.37644, 40.018 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 79.0369, 3.0717 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1.78545, 52.2156 )
+
+[node name="Level" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 102.707, 0.353558 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 30.9359, 43.6638 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 25.1023, -41.8961 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -47.7297, 9.72272 )
+shape = SubResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -0.335869, -0.0665016 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 1.11956, 0.221672 )
+scale = Vector2( 3.33333, 3.33333 )
+current = true

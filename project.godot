@@ -8,21 +8,97 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "HBoxContainer",
+"class": "ContributorClass",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/ContributorClass.gd"
+}, {
+"base": "PanelContainer",
+"class": "GistItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/GistItem.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventMultiScreenDrag",
+"language": "GDScript",
+"path": "res://addons/Godot Touch Input Manager/CustomInputEvents/InputEventMultiScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenPinch",
+"language": "GDScript",
+"path": "res://addons/Godot Touch Input Manager/CustomInputEvents/InputEventScreenPinch.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenTwist",
+"language": "GDScript",
+"path": "res://addons/Godot Touch Input Manager/CustomInputEvents/InputEventScreenTwist.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenDrag",
+"language": "GDScript",
+"path": "res://addons/Godot Touch Input Manager/CustomInputEvents/InputEventSingleScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTap",
+"language": "GDScript",
+"path": "res://addons/Godot Touch Input Manager/CustomInputEvents/InputEventSingleScreenTap.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTouch",
+"language": "GDScript",
+"path": "res://addons/Godot Touch Input Manager/CustomInputEvents/InputEventSingleScreenTouch.gd"
+}, {
+"base": "HBoxContainer",
+"class": "InvitationItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/InvitationItem.gd"
+}, {
+"base": "PanelContainer",
+"class": "RepositoryItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
+}, {
+"base": "Node",
+"class": "StateBase",
+"language": "GDScript",
+"path": "res://entities/player/states/state_base.gd"
+}, {
+"base": "StateBase",
+"class": "Static",
+"language": "GDScript",
+"path": "res://entities/player/states/static.gd"
+} ]
 _global_script_class_icons={
-
+"ContributorClass": "",
+"GistItem": "",
+"InputEventMultiScreenDrag": "",
+"InputEventScreenPinch": "",
+"InputEventScreenTwist": "",
+"InputEventSingleScreenDrag": "",
+"InputEventSingleScreenTap": "",
+"InputEventSingleScreenTouch": "",
+"InvitationItem": "",
+"RepositoryItem": "",
+"StateBase": "",
+"Static": ""
 }
 
 [application]
 
 config/name="FreezingAdventure"
-run/main_scene="res://menu/main_screen/MainScreen.tscn"
-config/icon="res://gameobjects/pingu.png"
+run/main_scene="res://menu/main_screen/main_screen.tscn"
+config/icon="res://pingu.png"
 
 [autoload]
 
 globals="*res://globals.gd"
-MusicPlayer="*res://AudioStreamPlayer.tscn"
+MusicPlayer="*res://audio_player.tscn"
+InputManager="*res://addons/Godot Touch Input Manager/InputManager.gd"
+PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
+IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
+UserData="*res://addons/github-integration/scripts/user_data.gd"
+RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 
 [display]
 
@@ -36,13 +112,14 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Trail" )
+enabled=PoolStringArray( "res://addons/Trail/plugin.cfg", "res://addons/github-integration/plugin.cfg" )
 
 [input]
 
 PLAYER_UP={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
  ]
 }
 PLAYER_DOWN={
@@ -63,6 +140,7 @@ PLAYER_RIGHT={
 
 [rendering]
 
-quality/2d/use_pixel_snap=true
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_clear_color=Color( 0, 0.505882, 0.807843, 1 )
 environment/default_environment="res://default_env.tres"
+quality/2d/use_pixel_snap=true

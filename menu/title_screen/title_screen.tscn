@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://title_screen.gd" type="Script" id=1]
+[ext_resource path="res://main_screen_background.png" type="Texture" id=2]
+[ext_resource path="res://fonts/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://buttons.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 5 )
+region = Rect2( 80, 0, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 96, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 5 )
+region = Rect2( 80, 96, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 48, 80, 40 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 5 )
+region = Rect2( 80, 48, 80, 40 )
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -280.0
+margin_bottom = 280.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainscreen_background" type="Sprite" parent="."]
+scale = Vector2( 0.710059, 0.709534 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer2"]
+visible = false
+margin_top = 8.0
+margin_right = 640.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 10
+custom_constants/shadow_offset_y = 0
+text = "Freezing
+Adventure"
+align = 1
+valign = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer2"]
+margin_top = 211.0
+margin_right = 360.0
+margin_bottom = 429.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer2"]
+margin_right = 360.0
+margin_bottom = 70.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="TextureButton" parent="VBoxContainer2/VBoxContainer2/VBoxContainer"]
+margin_left = 110.0
+margin_right = 250.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 140, 70 )
+hint_tooltip = "Play the game with this button"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = SubResource( 2 )
+texture_pressed = SubResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer2"]
+margin_top = 74.0
+margin_right = 360.0
+margin_bottom = 144.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="TextureButton" parent="VBoxContainer2/VBoxContainer2/VBoxContainer2"]
+margin_left = 110.0
+margin_right = 250.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 140, 70 )
+hint_tooltip = "Open the settings with this button"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = SubResource( 4 )
+texture_pressed = SubResource( 5 )
+expand = true
+
+[node name="VBoxContainer3" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer2"]
+margin_top = 148.0
+margin_right = 360.0
+margin_bottom = 218.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="TextureButton" parent="VBoxContainer2/VBoxContainer2/VBoxContainer3"]
+margin_left = 110.0
+margin_right = 250.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 140, 70 )
+hint_tooltip = "Exit the game with this button"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = SubResource( 6 )
+texture_pressed = SubResource( 7 )
+expand = true
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer2/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer2/VBoxContainer2/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer2/VBoxContainer3/QuitButton" to="." method="_on_QuitButton_pressed"]
