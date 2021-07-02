@@ -1,5 +1,6 @@
 .mono/
 .import/
-Export/
+export/
+android/
 .vscode/
 .sss/
