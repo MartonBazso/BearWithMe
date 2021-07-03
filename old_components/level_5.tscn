@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://old_components/Sprite-0005-sheet.png" type="Texture" id=1]
-[ext_resource path="res://entities/player/player_2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://old_components/player_2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://old_components/user_interface.tscn" type="PackedScene" id=3]
 [ext_resource path="res://old_components/sun-light-layer.png" type="Texture" id=4]
 [ext_resource path="res://old_components/finish.tscn" type="PackedScene" id=5]

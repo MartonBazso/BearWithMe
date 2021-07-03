@@ -13,7 +13,7 @@ func _ready():
 		"stop": $Stop,
 	}
 	_change_state(initial_state)
-	
+
 	for child in get_children():
 		child.connect("finished", self, "_change_state")
 

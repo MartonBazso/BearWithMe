@@ -3,7 +3,7 @@ extends StateBase
 var speed = globals.speed
 
 
-func _enter():	
+func _enter():
 	var orientation = get_orientation_as_string()
 	if orientation:
 		owner.get_node("AnimationPlayer").play("move_" + orientation)

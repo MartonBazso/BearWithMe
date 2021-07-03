@@ -40,9 +40,9 @@ func set_input_direction(event):
 	if not event:
 		current_direction = null
 		return
-	
+
 	var direction_vector = Vector2()
-	
+
 	if event is InputEventMultiScreenDrag:
 		direction_vector = event.relative
 	elif event is InputEventSingleScreenDrag:
@@ -61,14 +61,14 @@ func _get_input_direction_by_key():
 
 func _get_direction_from_vector(vector):
 	var dir = Vector2()
-	
+
 	if abs(vector.x) >= abs(vector.y):
 		dir.y = 0
 		dir.x = floor(vector.x + 0.5)
 	else:
 		dir.x = 0
 		dir.y = floor(vector.y + 0.5)
-	
+
 	return dir
 
 

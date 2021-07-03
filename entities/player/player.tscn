@@ -6,7 +6,7 @@
 [ext_resource path="res://entities/player/states/stop.gd" type="Script" id=4]
 [ext_resource path="res://entities/player/player.gd" type="Script" id=5]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 resource_name = "idle_down"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -21,7 +21,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0.454902, 0.0705882, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 resource_name = "idle_left"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -36,8 +36,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0.454902, 0.0705882, 1 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "idle_right"
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -51,7 +50,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0.454902, 0.0705882, 1 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 resource_name = "idle_up"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -66,7 +65,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0.454902, 0.0705882, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=5]
 resource_name = "move_down"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -81,8 +80,7 @@ tracks/0/keys = {
 "values": [ Color( 0.00784314, 0, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "move_left"
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -96,7 +94,7 @@ tracks/0/keys = {
 "values": [ Color( 0.00784314, 0, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=7]
 resource_name = "move_right"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -111,7 +109,7 @@ tracks/0/keys = {
 "values": [ Color( 0.00784314, 0, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=8]
 resource_name = "move_up"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -126,7 +124,7 @@ tracks/0/keys = {
 "values": [ Color( 0.00784314, 0, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=9]
 resource_name = "stop_down"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -141,7 +139,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 resource_name = "stop_left"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -156,8 +154,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "stop_right"
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -171,7 +168,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 resource_name = "stop_up"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -186,7 +183,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 16, 16 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -205,21 +202,21 @@ script = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idle_down = SubResource( 5 )
-anims/idle_left = SubResource( 6 )
-anims/idle_right = SubResource( 1 )
-anims/idle_up = SubResource( 7 )
-anims/move_down = SubResource( 8 )
-anims/move_left = SubResource( 2 )
-anims/move_right = SubResource( 9 )
-anims/move_up = SubResource( 10 )
-anims/stop_down = SubResource( 11 )
-anims/stop_left = SubResource( 12 )
-anims/stop_right = SubResource( 3 )
-anims/stop_up = SubResource( 13 )
+anims/idle_down = SubResource( 1 )
+anims/idle_left = SubResource( 2 )
+anims/idle_right = SubResource( 3 )
+anims/idle_up = SubResource( 4 )
+anims/move_down = SubResource( 5 )
+anims/move_left = SubResource( 6 )
+anims/move_right = SubResource( 7 )
+anims/move_up = SubResource( 8 )
+anims/stop_down = SubResource( 9 )
+anims/stop_left = SubResource( 10 )
+anims/stop_right = SubResource( 11 )
+anims/stop_up = SubResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 4 )
+shape = SubResource( 13 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -16.0
