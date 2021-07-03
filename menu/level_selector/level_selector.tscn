@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://level_selector.gd" type="Script" id=1]
-[ext_resource path="res://buttons.png" type="Texture" id=2]
+[ext_resource path="res://old_components/level_selector.gd" type="Script" id=1]
+[ext_resource path="res://old_components/buttons.png" type="Texture" id=2]
 [ext_resource path="res://menu/music_button.tscn" type="PackedScene" id=3]
 
 [sub_resource type="AtlasTexture" id=1]

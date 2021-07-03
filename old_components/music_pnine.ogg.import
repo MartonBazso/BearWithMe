@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music_pnine.ogg-e8ddabcbf22b252a20a37c747fcc5bc5.oggstr"
+
+[deps]
+
+source_file="res://old_components/music_pnine.ogg"
+dest_files=[ "res://.import/music_pnine.ogg-e8ddabcbf22b252a20a37c747fcc5bc5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

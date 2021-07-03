@@ -9,16 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "HBoxContainer",
-"class": "ContributorClass",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/ContributorClass.gd"
-}, {
-"base": "PanelContainer",
-"class": "GistItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/GistItem.gd"
-}, {
 "base": "InputEventAction",
 "class": "InputEventMultiScreenDrag",
 "language": "GDScript",
@@ -49,16 +39,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Godot Touch Input Manager/CustomInputEvents/InputEventSingleScreenTouch.gd"
 }, {
-"base": "HBoxContainer",
-"class": "InvitationItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/InvitationItem.gd"
-}, {
-"base": "PanelContainer",
-"class": "RepositoryItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
-}, {
 "base": "Node",
 "class": "StateBase",
 "language": "GDScript",
@@ -70,16 +50,12 @@ _global_script_classes=[ {
 "path": "res://entities/player/states/static.gd"
 } ]
 _global_script_class_icons={
-"ContributorClass": "",
-"GistItem": "",
 "InputEventMultiScreenDrag": "",
 "InputEventScreenPinch": "",
 "InputEventScreenTwist": "",
 "InputEventSingleScreenDrag": "",
 "InputEventSingleScreenTap": "",
 "InputEventSingleScreenTouch": "",
-"InvitationItem": "",
-"RepositoryItem": "",
 "StateBase": "",
 "Static": ""
 }
@@ -88,7 +64,7 @@ _global_script_class_icons={
 
 config/name="FreezingAdventure"
 run/main_scene="res://menu/main_screen/main_screen.tscn"
-config/icon="res://pingu.png"
+config/icon="res://old_components/pingu.png"
 
 [autoload]
 
