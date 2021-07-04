@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://old_components/pause_and_end_level_scene.gd" type="Script" id=1]
+[ext_resource path="res://menu/pause_scene/pause_and_end_level_scene.gd" type="Script" id=1]
 [ext_resource path="res://old_components/buttons.png" type="Texture" id=2]
-[ext_resource path="res://menu/music_button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://menu/main_screen/common/music_button/music_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fonts/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=4]
 
 

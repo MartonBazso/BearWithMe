@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://old_components/level_selector_button.gd" type="Script" id=1]
+[ext_resource path="res://menu/main_screen/level_selector/level_selector_button.gd" type="Script" id=1]
 [ext_resource path="res://old_components/buttons.png" type="Texture" id=2]
 [ext_resource path="res://fonts/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=3]
 

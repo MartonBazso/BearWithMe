@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/restart_button.png-4d30388fe71f806a73377cc89903b071.stex"
+path="res://.import/level_select_pressed.png-f08196443b48d9e6652d0ecc18417215.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_components/endgame_pause_screen/restart_button.png"
-dest_files=[ "res://.import/restart_button.png-4d30388fe71f806a73377cc89903b071.stex" ]
+source_file="res://menu/main_screen/level_selector/level_select_pressed.png"
+dest_files=[ "res://.import/level_select_pressed.png-f08196443b48d9e6652d0ecc18417215.stex" ]
 
 [params]
 
@@ -20,8 +20,8 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
-flags/mipmaps=true
+flags/filter=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

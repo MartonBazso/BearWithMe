@@ -16,4 +16,4 @@ func _on_QuitButton_pressed():
 
 func _on_SettingsButton_pressed():
 	globals.delete_save()
-	
+

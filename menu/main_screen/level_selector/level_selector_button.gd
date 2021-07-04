@@ -19,8 +19,8 @@ func _on_LevelSelector_pressed():
 
 
 func _on_LevelSelector_button_up():
-	$LevelSelector/Label.rect_position.y -= 2 
+	$LevelSelector/Label.rect_position.y -= 2
 
 
-func _on_LevelSelector_button_down():	 
-	$LevelSelector/Label.rect_position.y += 2 
+func _on_LevelSelector_button_down():
+	$LevelSelector/Label.rect_position.y += 2

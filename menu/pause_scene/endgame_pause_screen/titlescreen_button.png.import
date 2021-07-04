@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nextlevel_button_pressed.png-a54647f7beeb4aa6f6eac715b2155a9d.stex"
+path="res://.import/titlescreen_button.png-ade7239ac5b8629259ee8c7e11a5bd08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_components/endgame_pause_screen/nextlevel_button_pressed.png"
-dest_files=[ "res://.import/nextlevel_button_pressed.png-a54647f7beeb4aa6f6eac715b2155a9d.stex" ]
+source_file="res://menu/pause_scene/endgame_pause_screen/titlescreen_button.png"
+dest_files=[ "res://.import/titlescreen_button.png-ade7239ac5b8629259ee8c7e11a5bd08.stex" ]
 
 [params]
 

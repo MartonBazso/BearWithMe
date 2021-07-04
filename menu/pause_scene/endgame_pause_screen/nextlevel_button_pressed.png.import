@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/level_select.png-38b17214d20c69db6655fc908843fb3e.stex"
+path="res://.import/nextlevel_button_pressed.png-163665639abd515e6c8b3243505416d6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_components/level_selector/level_select.png"
-dest_files=[ "res://.import/level_select.png-38b17214d20c69db6655fc908843fb3e.stex" ]
+source_file="res://menu/pause_scene/endgame_pause_screen/nextlevel_button_pressed.png"
+dest_files=[ "res://.import/nextlevel_button_pressed.png-163665639abd515e6c8b3243505416d6.stex" ]
 
 [params]
 
@@ -20,8 +20,8 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

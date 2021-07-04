@@ -1,8 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://old_components/buttons.png" type="Texture" id=1]
-[ext_resource path="res://old_components/music_button.gd" type="Script" id=2]
-
+[ext_resource path="res://menu/main_screen/common/music_button/music_button.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
