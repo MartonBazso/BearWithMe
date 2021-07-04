@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/polar_bear_kid_2.png-9bace928a53321bb6b1609100daff8d7.stex"
+path="res://.import/polar_bear_kid_2.png-5d67d9bb10623b2dd38a8bf0c9219d3a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_components/polar_bear_kid_2.png"
-dest_files=[ "res://.import/polar_bear_kid_2.png-9bace928a53321bb6b1609100daff8d7.stex" ]
+source_file="res://entities/player/assets/polar_bear_kid_2.png"
+dest_files=[ "res://.import/polar_bear_kid_2.png-5d67d9bb10623b2dd38a8bf0c9219d3a.stex" ]
 
 [params]
 
