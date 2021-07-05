@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://menu/main_screen/main_screen.gd" type="Script" id=1]
 [ext_resource path="res://menu/main_screen/title_screen/title_screen.tscn" type="PackedScene" id=3]
@@ -6,6 +6,7 @@
 [ext_resource path="res://menu/main_screen/common/particle/particles_2d.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
+resource_name = "menu_transition"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("LevelSelector:rect_position")
@@ -29,34 +30,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 1920 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("LevelSelector:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 640, 360 ), Vector2( 0, 360 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TitleScreen:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 360 ), Vector2( -640, 360 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -1920 ) ]
 }
 
 [node name="MainScreen" type="Control"]
@@ -68,17 +42,16 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 540, 960 )
 current = true
 
 [node name="LevelSelector" parent="." instance=ExtResource( 5 )]
-margin_bottom = -0.000244141
+margin_top = 1920.0
+margin_bottom = 1920.0
 
 [node name="TitleScreen" parent="." instance=ExtResource( 3 )]
-margin_top = 360.0
-margin_bottom = 360.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/SlideLvlSelector = SubResource( 1 )
-anims/SlideTitle = SubResource( 2 )
+anims/menu_transition = SubResource( 1 )
 
 [node name="Particles2D" parent="." instance=ExtResource( 6 )]

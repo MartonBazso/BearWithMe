@@ -11,7 +11,7 @@ var mouseInGUI = false
 
 func save_game():
 	var save_game = File.new()
-	save_game.open("user://savegame.save", File.WRITE)	
+	save_game.open("user://savegame.save", File.WRITE)
 	save_game.store_string(to_json(get_params()))
 	save_game.close()
 	return save_game.get_path_absolute()
@@ -32,8 +32,8 @@ func get_params():
 func load_game():
 	var save_game = File.new()
 	if not save_game.file_exists("user://savegame.save"):
-		return 
-	
+		return
+
 	save_game.open("user://savegame.save", File.READ)
 	while !save_game.eof_reached():
 		var saved_file = parse_json(save_game.get_line())

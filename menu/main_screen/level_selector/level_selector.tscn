@@ -55,6 +55,8 @@ margin_left = -48.0
 margin_top = -41.0
 texture_normal = SubResource( 1 )
 texture_pressed = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="toggled" from="MusicButton" to="." method="_on_MusicButton_toggled"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

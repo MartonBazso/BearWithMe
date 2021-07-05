@@ -3,11 +3,7 @@ extends Control
 
 
 func _on_PlayButton_pressed():
-	var animationPlayer
-	for c in get_node('../').get_children():
-		if c is AnimationPlayer:
-			animationPlayer = c
-	animationPlayer.play('SlideTitle')
+	owner.get_node("AnimationPlayer").play("menu_transition")
 
 
 func _on_QuitButton_pressed():
