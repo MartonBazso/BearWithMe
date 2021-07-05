@@ -24,7 +24,7 @@ func _on_ResumeButton_pressed():
 
 func _on_NextGameButton_pressed():
 	emit_signal("onNextGamePressed")
-	
+
 
 func _on_MusicButton_toggled(button_pressed):
 	globals.isVolumeOn = button_pressed

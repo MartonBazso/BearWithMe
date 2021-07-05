@@ -12,7 +12,7 @@ func start(duration = 0.2, frequency = 8, amplitude = 3):
 	$Timer.wait_time = 1/float(frequency)
 	$Duration.start()
 	$Timer.start()
-	
+
 	_new_shake()
 
 func _new_shake():

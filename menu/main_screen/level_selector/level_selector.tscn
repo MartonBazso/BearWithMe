@@ -15,16 +15,15 @@ region = Rect2( 80, 192, 48, 40 )
 [node name="LevelSelector" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -280.0
-margin_bottom = 280.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+button_path = "res://menu/main_screen/level_selector/level_selector_button.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 360.0
-margin_bottom = 640.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -32,10 +31,6 @@ __meta__ = {
 [node name="GridContainer" type="GridContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
 custom_constants/vseparation = 70
 custom_constants/hseparation = 70
 columns = 5
@@ -44,17 +39,22 @@ __meta__ = {
 }
 
 [node name="MusicButton" parent="." instance=ExtResource( 3 )]
-margin_left = 88.0
-margin_top = 568.0
-margin_right = 136.0
-margin_bottom = 608.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = -40.0
+margin_right = 48.0
+margin_bottom = 0.0
 
 [node name="BackButton" type="TextureButton" parent="."]
-margin_left = 208.0
-margin_top = 568.0
-margin_right = 256.0
-margin_bottom = 609.0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -48.0
+margin_top = -41.0
 texture_normal = SubResource( 1 )
 texture_pressed = SubResource( 2 )
+
 [connection signal="toggled" from="MusicButton" to="." method="_on_MusicButton_toggled"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

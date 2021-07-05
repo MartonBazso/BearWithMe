@@ -5,40 +5,39 @@
 [ext_resource path="res://menu/main_screen/common/music_button/music_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fonts/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=4]
 
-
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=1]
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 80, 40 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
 region = Rect2( 80, 1, 80, 39 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 336, 80, 41 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
 region = Rect2( 80, 336, 80, 40 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 384, 80, 40 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
 region = Rect2( 80, 384, 80, 40 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 432, 80, 40 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
 region = Rect2( 80, 432, 80, 40 )
 
@@ -72,30 +71,30 @@ __meta__ = {
 }
 
 [node name="Resume" type="HBoxContainer" parent="VSeparation"]
-margin_top = 57.0
+margin_top = 81.0
 margin_right = 640.0
-margin_bottom = 119.0
+margin_bottom = 127.0
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VSeparation/Resume"]
 margin_left = 280.0
 margin_right = 360.0
-margin_bottom = 62.0
+margin_bottom = 46.0
 
 [node name="resume" type="Label" parent="VSeparation/Resume/VBoxContainer"]
 margin_right = 80.0
-margin_bottom = 18.0
-custom_fonts/font = SubResource( 9 )
+margin_bottom = 2.0
+custom_fonts/font = SubResource( 1 )
 text = "Resume"
 align = 1
 valign = 1
 
 [node name="ResumeButton" type="TextureButton" parent="VSeparation/Resume/VBoxContainer"]
-margin_top = 22.0
+margin_top = 6.0
 margin_right = 80.0
-margin_bottom = 62.0
-texture_normal = SubResource( 1 )
-texture_pressed = SubResource( 2 )
+margin_bottom = 46.0
+texture_normal = SubResource( 2 )
+texture_pressed = SubResource( 3 )
 
 [node name="NextGame" type="HBoxContainer" parent="VSeparation"]
 visible = false
@@ -112,7 +111,7 @@ margin_bottom = 63.0
 [node name="next" type="Label" parent="VSeparation/NextGame/VBoxContainer"]
 margin_right = 80.0
 margin_bottom = 18.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 1 )
 text = "Next Level"
 align = 1
 valign = 1
@@ -121,67 +120,67 @@ valign = 1
 margin_top = 22.0
 margin_right = 80.0
 margin_bottom = 63.0
-texture_normal = SubResource( 3 )
-texture_pressed = SubResource( 4 )
+texture_normal = SubResource( 4 )
+texture_pressed = SubResource( 5 )
 
 [node name="Restart" type="HBoxContainer" parent="VSeparation"]
-margin_top = 149.0
+margin_top = 157.0
 margin_right = 640.0
-margin_bottom = 211.0
+margin_bottom = 203.0
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VSeparation/Restart"]
 margin_left = 280.0
 margin_right = 360.0
-margin_bottom = 62.0
+margin_bottom = 46.0
 
 [node name="restart" type="Label" parent="VSeparation/Restart/VBoxContainer"]
 margin_right = 80.0
-margin_bottom = 18.0
-custom_fonts/font = SubResource( 9 )
+margin_bottom = 2.0
+custom_fonts/font = SubResource( 1 )
 text = "Restart"
 align = 1
 valign = 1
 
 [node name="RestartButton" type="TextureButton" parent="VSeparation/Restart/VBoxContainer"]
-margin_top = 22.0
+margin_top = 6.0
 margin_right = 80.0
-margin_bottom = 62.0
-texture_normal = SubResource( 5 )
-texture_pressed = SubResource( 6 )
+margin_bottom = 46.0
+texture_normal = SubResource( 6 )
+texture_pressed = SubResource( 7 )
 
 [node name="TitleScreen" type="HBoxContainer" parent="VSeparation"]
-margin_top = 241.0
+margin_top = 233.0
 margin_right = 640.0
-margin_bottom = 303.0
+margin_bottom = 279.0
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VSeparation/TitleScreen"]
 margin_left = 280.0
 margin_right = 360.0
-margin_bottom = 62.0
+margin_bottom = 46.0
 
 [node name="title" type="Label" parent="VSeparation/TitleScreen/VBoxContainer"]
 margin_right = 80.0
-margin_bottom = 18.0
-custom_fonts/font = SubResource( 9 )
+margin_bottom = 2.0
+custom_fonts/font = SubResource( 1 )
 text = "Menu"
 align = 1
 valign = 1
 
 [node name="TitleScreenButton" type="TextureButton" parent="VSeparation/TitleScreen/VBoxContainer"]
-margin_top = 22.0
+margin_top = 6.0
 margin_right = 80.0
-margin_bottom = 62.0
-texture_normal = SubResource( 7 )
-texture_pressed = SubResource( 8 )
+margin_bottom = 46.0
+texture_normal = SubResource( 8 )
+texture_pressed = SubResource( 9 )
 
 [node name="music" type="Label" parent="."]
 margin_left = 541.221
 margin_top = 95.1366
 margin_right = 621.221
 margin_bottom = 113.137
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 1 )
 text = "Music"
 align = 1
 valign = 1
@@ -194,6 +193,7 @@ margin_left = 555.752
 margin_top = 47.4983
 margin_right = 603.752
 margin_bottom = 87.4983
+
 [connection signal="pressed" from="VSeparation/Resume/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="VSeparation/NextGame/VBoxContainer/NextGameButton" to="." method="_on_NextGameButton_pressed"]
 [connection signal="pressed" from="VSeparation/Restart/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]

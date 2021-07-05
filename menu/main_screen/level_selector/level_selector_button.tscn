@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://menu/main_screen/level_selector/level_selector_button.gd" type="Script" id=1]
 [ext_resource path="res://old_components/buttons.png" type="Texture" id=2]
-[ext_resource path="res://fonts/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=3]
-
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -12,14 +10,6 @@ region = Rect2( 0, 144, 48, 40 )
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 80, 144, 48, 40 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 12
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-extra_spacing_char = 4
-extra_spacing_space = 4
-font_data = ExtResource( 3 )
 
 [node name="LevelSelectorButton" type="Control"]
 script = ExtResource( 1 )
@@ -44,7 +34,6 @@ margin_left = 0.289497
 margin_top = -5.21107
 margin_right = 0.289497
 margin_bottom = 21.9089
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "2"
 align = 1
@@ -52,6 +41,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="button_down" from="LevelSelector" to="." method="_on_LevelSelector_button_down"]
 [connection signal="button_up" from="LevelSelector" to="." method="_on_LevelSelector_button_up"]
 [connection signal="pressed" from="LevelSelector" to="." method="_on_LevelSelector_pressed"]
