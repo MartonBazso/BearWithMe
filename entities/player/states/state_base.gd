@@ -1,7 +1,7 @@
 class_name StateBase
 extends Node
 
-signal finished(next_state_name)
+signal finished(next_state)
 
 var orientations = {
 	"up": Vector2(0,-1),
@@ -20,15 +20,15 @@ func _enter():
 	pass
 
 
-func _handle_input(event):
+func _handle_input(_event):
 	pass
 
 
-func _update(delta):
+func _update(_delta):
 	pass
 
 
-func _on_animation_finished(anim_name):
+func _on_animation_finished(_anim_name):
 	pass
 
 

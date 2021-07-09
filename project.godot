@@ -69,7 +69,7 @@ _global_script_class_icons={
 [application]
 
 config/name="FreezingAdventure"
-run/main_scene="res://game.tscn"
+run/main_scene="res://menu/main_screen/main_screen.tscn"
 config/icon="res://old_components/pingu.png"
 
 [autoload]

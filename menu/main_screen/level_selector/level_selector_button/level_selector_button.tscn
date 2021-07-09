@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://menu/main_screen/level_selector/level_selector_button.gd" type="Script" id=1]
+[ext_resource path="res://menu/main_screen/level_selector/level_selector_button/level_selector_button.gd" type="Script" id=1]
 [ext_resource path="res://old_components/buttons.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -11,23 +11,25 @@ region = Rect2( 0, 144, 48, 40 )
 atlas = ExtResource( 2 )
 region = Rect2( 80, 144, 48, 40 )
 
-[node name="LevelSelectorButton" type="Control"]
+[node name="LevelSelectorButton" type="TextureButton"]
+margin_right = 48.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 48, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+keep_pressed_outside = true
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+expand = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LevelSelector" type="TextureButton" parent="."]
-margin_right = 48.0
-margin_bottom = 40.0
-keep_pressed_outside = true
-texture_normal = SubResource( 1 )
-texture_pressed = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="LevelSelector"]
+[node name="Label" type="Label" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 0.322
 margin_left = 0.289497
@@ -42,6 +44,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="button_down" from="LevelSelector" to="." method="_on_LevelSelector_button_down"]
-[connection signal="button_up" from="LevelSelector" to="." method="_on_LevelSelector_button_up"]
-[connection signal="pressed" from="LevelSelector" to="." method="_on_LevelSelector_pressed"]
+[connection signal="pressed" from="." to="." method="_on_LevelSelectorButton_pressed"]

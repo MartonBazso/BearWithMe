@@ -2,7 +2,7 @@ extends Node
 
 var speed = 3
 var currentLevel = 1
-var maxLevelReached = 15
+var maxLevelReached = 1
 var isVolumeOn = false
 var money = 0
 var screen_shake = true
