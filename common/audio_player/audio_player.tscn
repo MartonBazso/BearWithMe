@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://old_components/music_pnine.ogg" type="AudioStream" id=1]
-[ext_resource path="res://main_audio_stream_player.gd" type="Script" id=2]
+[ext_resource path="res://common/audio_player/main_audio_stream_player.gd" type="Script" id=2]
+
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 pause_mode = 2

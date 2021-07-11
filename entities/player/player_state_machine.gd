@@ -25,10 +25,10 @@ func _input(event):
 func _change_state(state_name):
 	var dir = null
 	if current_state:
-		dir = current_state.current_direction
+		dir = DirectionManager.current_direction
 	current_state = states_map[state_name]
 	current_state._enter()
-	current_state.current_direction = dir
+	DirectionManager.current_direction = dir
 
 
 func _physics_process(delta):

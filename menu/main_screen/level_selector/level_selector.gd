@@ -21,6 +21,6 @@ func _on_BackButton_pressed():
 
 
 func _on_level_selected(level_num):
-	owner.get_node("AnimationPlayer").play("transition_to_level")
+	owner.get_node("AnimationPlayer").play("level_transition")
 	yield(owner.get_node("AnimationPlayer"), "animation_finished")
 	get_tree().change_scene("res://levels/level_" + level_num + "/level_" + level_num + ".tscn")
