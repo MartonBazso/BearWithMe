@@ -16,10 +16,6 @@ func _ready():
 			k+=1
 
 
-func _on_BackButton_pressed():
-	owner.get_node("AnimationPlayer").play_backwards("menu_transition")
-
-
 func _on_level_selected(level_num):
 	owner.get_node("AnimationPlayer").play("level_transition")
 	yield(owner.get_node("AnimationPlayer"), "animation_finished")

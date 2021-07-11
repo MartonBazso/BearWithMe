@@ -1,32 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://menu/main_screen/title_screen/title_screen.gd" type="Script" id=1]
 [ext_resource path="res://menu/main_screen/main_screen_background.png" type="Texture" id=2]
-[ext_resource path="res://old_components/buttons.png" type="Texture" id=5]
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 80, 40 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 5 )
-region = Rect2( 80, 0, 80, 40 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 96, 80, 40 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 5 )
-region = Rect2( 80, 96, 80, 40 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 48, 80, 40 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 5 )
-region = Rect2( 80, 48, 80, 40 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -44,69 +19,3 @@ stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-visible = false
-anchor_left = 0.3
-anchor_top = 0.3
-anchor_right = 0.7
-anchor_bottom = 0.7
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 432.0
-margin_bottom = 768.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 80
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PlayButton" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
-margin_right = 432.0
-margin_bottom = 202.0
-rect_min_size = Vector2( 140, 70 )
-hint_tooltip = "Play the game with this button"
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 1 )
-texture_pressed = SubResource( 2 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SettingsButton" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
-margin_top = 282.0
-margin_right = 432.0
-margin_bottom = 485.0
-rect_min_size = Vector2( 140, 70 )
-hint_tooltip = "Open the settings with this button"
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 3 )
-texture_pressed = SubResource( 4 )
-expand = true
-
-[node name="QuitButton" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
-margin_top = 565.0
-margin_right = 432.0
-margin_bottom = 768.0
-rect_min_size = Vector2( 140, 70 )
-hint_tooltip = "Exit the game with this button"
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 5 )
-texture_pressed = SubResource( 6 )
-expand = true
-
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/SettingsButton" to="." method="_on_SettingsButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
