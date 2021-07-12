@@ -1,16 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://menu/main_screen/level_selector/level_selector.gd" type="Script" id=1]
-[ext_resource path="res://old_components/buttons.png" type="Texture" id=2]
-[ext_resource path="res://menu/main_screen/common/music_button/music_button.tscn" type="PackedScene" id=3]
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 191, 48, 41 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 2 )
-region = Rect2( 80, 192, 48, 40 )
+[ext_resource path="res://menu/main_screen/common/font/concert_one_100.tres" type="DynamicFont" id=2]
 
 [node name="LevelSelector" type="Control"]
 anchor_right = 1.0
@@ -28,18 +19,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Label" type="Label" parent="."]
 anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/separation = 50
-alignment = 1
+margin_bottom = 234.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LEVELS"
+align = 1
+valign = 1
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
-margin_right = 1080.0
-margin_bottom = 1670.0
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 75.0
+margin_top = -579.0
+margin_right = -75.0
+margin_bottom = 804.0
 size_flags_horizontal = 7
 size_flags_vertical = 3
 custom_constants/vseparation = 70
@@ -48,36 +48,3 @@ columns = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1720.0
-margin_right = 1080.0
-margin_bottom = 1920.0
-custom_constants/separation = 30
-alignment = 1
-
-[node name="BackButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
-margin_right = 525.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 200, 200 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 1 )
-texture_pressed = SubResource( 2 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MusicButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
-margin_left = 555.0
-margin_top = 0.0
-margin_right = 1080.0
-margin_bottom = 200.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand = true
-stretch_mode = 5
-
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

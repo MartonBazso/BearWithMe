@@ -1,7 +1,6 @@
 extends Control
 
 
-
 func _on_PlayButton_pressed():
 	owner.get_node("AnimationPlayer").play("menu_transition")
 

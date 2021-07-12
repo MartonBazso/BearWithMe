@@ -8,7 +8,7 @@
 [sub_resource type="Animation" id=1]
 resource_name = "level_transition"
 tracks/0/type = "value"
-tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/path = NodePath("Transition/ColorRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ColorRect:color")
+tracks/1/path = NodePath("Transition/ColorRect:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -32,31 +32,51 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="MainScreen" type="Node"]
+[node name="MainScreen" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="SettingsPage" parent="." instance=ExtResource( 2 )]
+[node name="MenuItems" type="Node" parent="."]
+
+[node name="SettingsPage" parent="MenuItems" instance=ExtResource( 2 )]
 anchor_left = -1.0
+anchor_right = 0.0
+input_pass_on_modal_close_click = false
 
-[node name="TitleScreen" parent="." instance=ExtResource( 3 )]
+[node name="TitleScreen" parent="MenuItems" instance=ExtResource( 3 )]
+input_pass_on_modal_close_click = false
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="LevelSelector" parent="." instance=ExtResource( 5 )]
+[node name="LevelSelector" parent="MenuItems" instance=ExtResource( 5 )]
 anchor_left = 1.0
 anchor_right = 2.0
+input_pass_on_modal_close_click = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 540, 960 )
+current = true
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/level_transition = SubResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Transition" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/level_transition = SubResource( 1 )
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.125
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

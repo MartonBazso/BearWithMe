@@ -21,14 +21,14 @@ func set_input_direction(event):
 
 	var direction_vector = Vector2()
 
-	if event is InputEventMultiScreenDrag:
-		print("drag")
-		direction_vector = event.relative
-	elif event is InputEventSingleScreenDrag:
-		print("drag")
+	if (event is InputEventMultiScreenDrag or
+	event is InputEventSingleScreenDrag or
+	event is InputEventJoypadMotion):
+	#(event is InputEventMouseMotion and Input.is_mouse_button_pressed(BUTTON_LEFT))):
 		direction_vector = event.relative
 	elif event is InputEventKey:
 		direction_vector = _get_input_direction_by_key()
+
 	current_direction = _get_direction_from_vector(direction_vector.normalized())
 
 

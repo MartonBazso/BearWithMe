@@ -76,8 +76,8 @@ config/icon="res://old_components/pingu.png"
 
 globals="*res://globals.gd"
 InputManager="*res://addons/Godot Touch Input Manager/InputManager.gd"
-MusicPlayer="*res://common/audio_player/audio_player.tscn"
 DirectionManager="*res://common/direction_manager/direction_manager.gd"
+MusicPlayer="*res://common/audio_player/audio_player.tscn"
 
 [display]
 

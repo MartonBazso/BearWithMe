@@ -8,6 +8,8 @@ var money = 0
 var screen_shake = true
 var maxLevelOnFirstPage = 30
 var mouseInGUI = false
+var sensitivity = 3000
+
 
 func save_game():
 	var save_game = File.new()

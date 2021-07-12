@@ -27,7 +27,7 @@ var tap_delay_timer = Timer.new()
 var only_touch = null # Last touch if there wasn't another touch at the same time.
 
 var drag_startup_timer = Timer.new()
-var drag_enabled = false 
+var drag_enabled = false
 
 
 ## Creates the required timers and connects their timeouts.
@@ -58,7 +58,7 @@ func _unhandled_input(event):
 			last_mouse_press = event
 		else:
 			last_mouse_press = null
-		
+
 	elif event is InputEventMouseMotion:
 		if last_mouse_press:
 			if last_mouse_press.button_index == BUTTON_MIDDLE:
@@ -71,11 +71,11 @@ func _unhandled_input(event):
 				emit("twist", InputEventScreenTwist.new({"position": last_mouse_press.position,
 														 "relative": rel1.angle_to(rel2),
 														 "speed": event.speed}))
-	
+
 	# Touch.
 	elif event is InputEventScreenTouch:
 		if event.pressed:
-			touches[event.get_index()] = event 
+			touches[event.get_index()] = event
 			if (event.get_index() == 0): # First and only touch.
 				emit("single_touch", InputEventSingleScreenTouch.new(event))
 				only_touch = event
@@ -89,10 +89,10 @@ func _unhandled_input(event):
 			cancel_single_drag()
 			if only_touch:
 				emit("single_touch", InputEventSingleScreenTouch.new(event))
-				if !tap_delay_timer.is_stopped(): 
+				if !tap_delay_timer.is_stopped():
 					tap_delay_timer.stop()
 					emit("single_tap", InputEventSingleScreenTap.new(only_touch))
-		
+
 	elif event is InputEventScreenDrag:
 		drags[event.index] = event
 		if !complex_gesture_in_progress():
@@ -137,18 +137,18 @@ func identify_gesture(gesture_drags):
 	for e in gesture_drags.values():
 		center += e.position
 	center /= gesture_drags.size()
-	
+
 	var sector = null
 	for e in gesture_drags.values():
 		var adjusted_position = center - e.position
-		var raw_angle = fmod(adjusted_position.angle_to(e.relative) + (PI/4), TAU) 
+		var raw_angle = fmod(adjusted_position.angle_to(e.relative) + (PI/4), TAU)
 		var adjusted_angle = raw_angle if raw_angle >= 0 else raw_angle + TAU
 		var e_sector = floor(adjusted_angle / (PI/2))
-		if sector == null: 
+		if sector == null:
 			sector = e_sector
 		elif sector != e_sector:
 			sector = -1
-	
+
 	if sector == -1:               return Gestures.MULTI_DRAG
 	if sector == 0 or sector == 2: return Gestures.PINCH
 	if sector == 1 or sector == 3: return Gestures.TWIST
