@@ -127,6 +127,4 @@ margin_right = 639.0
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 
-[connection signal="gui_input" from="VBoxContainer/Volume/HSlider" to="." method="_on_HSlider_gui_input"]
-[connection signal="gui_input" from="VBoxContainer/SFX/HSlider" to="." method="_on_HSlider_gui_input"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
