@@ -21,7 +21,7 @@ func _ready():
 
 
 func _input(event):
-	if not (event is InputEventMultiScreenDrag or
+	if $MenuItems/SettingsPage.is_gui_active or not (event is InputEventMultiScreenDrag or
 	event is InputEventSingleScreenDrag or
 	event is InputEventJoypadMotion or
 	(event is InputEventMouseMotion and Input.is_mouse_button_pressed(BUTTON_LEFT))):

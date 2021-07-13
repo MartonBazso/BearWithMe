@@ -80,26 +80,26 @@ margin_top = 0.0
 margin_right = 800.0
 margin_bottom = 64.0
 
-[node name="VFX" type="HBoxContainer" parent="VBoxContainer"]
+[node name="SFX" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 144.0
 margin_right = 800.0
 margin_bottom = 208.0
 custom_constants/separation = 85
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/VFX"]
+[node name="Label" type="Label" parent="VBoxContainer/SFX"]
 margin_top = 6.0
-margin_right = 79.0
+margin_right = 352.0
 margin_bottom = 57.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "vfx"
+text = "sound effect"
 
-[node name="HSlider" parent="VBoxContainer/VFX" instance=ExtResource( 3 )]
+[node name="HSlider" parent="VBoxContainer/SFX" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 164.0
+margin_left = 437.0
 margin_top = 0.0
 margin_right = 800.0
 margin_bottom = 64.0
@@ -117,9 +117,16 @@ margin_bottom = 61.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "screen shake"
+align = 1
+valign = 1
 
 [node name="CheckBox" parent="VBoxContainer/ScreenShake" instance=ExtResource( 4 )]
 margin_left = 567.0
 margin_right = 639.0
 
-[connection signal="mouse_entered" from="VBoxContainer/Volume/HSlider" to="." method="_on_HSlider_mouse_entered"]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="gui_input" from="VBoxContainer/Volume/HSlider" to="." method="_on_HSlider_gui_input"]
+[connection signal="gui_input" from="VBoxContainer/SFX/HSlider" to="." method="_on_HSlider_gui_input"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
