@@ -39,7 +39,7 @@ func snap_to_closest_center():
 	var closest_center = get_closest_center_to_current_pos()
 	tween.interpolate_property($Camera2D, "position",
 	current_pos, closest_center, 0.3,
-	Tween.TRANS_BACK, Tween.EASE_IN_OUT)
+	Tween.TRANS_QUART, Tween.EASE_IN_OUT)
 	current_pos = closest_center
 	tween.start()
 
