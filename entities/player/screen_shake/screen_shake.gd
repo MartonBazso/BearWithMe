@@ -7,6 +7,8 @@ var amplitude = 0
 onready var camera = get_parent()
 
 func start(duration = 0.2, frequency = 8, amplitude = 3):
+	if not globals.screen_shake:
+		return
 	self.amplitude = amplitude
 	$Duration.wait_time = duration
 	$Timer.wait_time = 1/float(frequency)

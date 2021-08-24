@@ -10,8 +10,7 @@ func _enter():
 
 
 func _update(delta):
-	var velocity = DirectionManager.get_input_direction() * speed #* delta
-	print(velocity)
+	var velocity = DirectionManager.get_input_direction() *3
 	var collide = owner.move_and_collide(velocity)
 	if(collide != null):
 		emit_signal("finished", "stop")

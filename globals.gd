@@ -1,11 +1,11 @@
 extends Node
 
-var speed = 1
+var speed = 2.5
 var currentLevel = 1
 var maxLevelReached = 1
 var isVolumeOn = false
 var money = 0
-var screen_shake = false
+var screen_shake = true
 var maxLevelOnFirstPage = 30
 var mouseInGUI = false
 var sensitivity = 3000

@@ -29,7 +29,6 @@ tracks/1/keys = {
 }
 
 [node name="Camera2D" type="Camera2D"]
-position = Vector2( 1620, 960 )
 current = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
