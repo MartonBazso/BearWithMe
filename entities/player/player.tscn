@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://entities/player/player_state_machine.gd" type="Script" id=1]
 [ext_resource path="res://entities/player/states/idle.gd" type="Script" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://entities/player/states/stop.gd" type="Script" id=4]
 [ext_resource path="res://entities/player/player.gd" type="Script" id=5]
 [ext_resource path="res://entities/player/assets/player_basic.png" type="Texture" id=6]
+[ext_resource path="res://entities/player/states/lose.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.999, 15.999 )
+extents = Vector2( 15.9, 15.9 )
 
 [sub_resource type="Animation" id=2]
 
@@ -85,8 +86,10 @@ tracks/0/keys = {
 [sub_resource type="OccluderPolygon2D" id=14]
 polygon = PoolVector2Array( -0.143017, 0.259188, -0.0316544, 32.3315, 31.7066, 31.7747, 31.7066, 0.259188 )
 
-[node name="Player" type="KinematicBody2D"]
-collision/safe_margin = 0.001
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
+collision/safe_margin = 0.1
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -104,6 +107,9 @@ script = ExtResource( 3 )
 
 [node name="Stop" type="Node" parent="StateMachine"]
 script = ExtResource( 4 )
+
+[node name="Lose" type="Node" parent="StateMachine"]
+script = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle_down = SubResource( 2 )

@@ -11,6 +11,7 @@ func _ready():
 		"idle": $Idle,
 		"move": $Move,
 		"stop": $Stop,
+		"lose": $Lose,
 	}
 	_change_state(initial_state)
 
